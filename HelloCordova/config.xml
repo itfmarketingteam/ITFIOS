@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="am.tfllc.payments" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <feature name="CDVWebViewEngine">
         <param name="ios-package" value="CDVWebViewEngine" />
     </feature>
@@ -33,28 +33,33 @@
     <feature name="IonicWebView">
         <param name="ios-package" value="CDVWKWebViewEngine" />
     </feature>
-    <name>HelloCordova</name>
-    <description>Sample Apache Cordova App</description>
-    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
-        Apache Cordova Team
-    </author>
+    <name>ITFLLC Payments</name>
+    <description>Приложение для оплаты коммунальных услуг в Армении</description>
+    <author email="hello@itfllc.am" href="http://62.89.3.242:9000">TFLLC LLC</author>
     <content src="index.html" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <allow-navigation href="http://172.10.10.50:9000/*" />
-    <access origin="http://172.10.10.50:9000/*" />
-    <preference name="AllowInlineMediaPlayback" value="false" />
+    <allow-navigation href="http://62.89.3.242:9000/*" />
+    <allow-navigation href="https://62.89.3.242:9000/*" />
+    <allow-navigation href="*" />
+    <access origin="*" />
+    <allow-intent href="*" />
+    <edit-config file="*-Info.plist" mode="merge" target="NSAppTransportSecurity">
+        <dict>
+            <key>NSAllowsArbitraryLoads</key>
+            <true />
+        </dict>
+    </edit-config>
+    <icon height="180" src="res/icon/ios/icon.png" width="180" />
+    <preference name="AllowInlineMediaPlayback" value="true" />
     <preference name="DisallowOverscroll" value="true" />
+    <preference name="EnableViewportScale" value="false" />
     <preference name="MediaTypesRequiringUserActionForPlayback" value="none" />
     <preference name="SuppressesIncrementalRendering" value="false" />
     <preference name="SuppressesLongPressGesture" value="false" />
     <preference name="Suppresses3DTouchGesture" value="false" />
     <preference name="deployment-target" value="11.0" />
     <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
-    <preference name="DisallowZoom" value="true" />
-    <preference name="ZoomControl" value="false" />
-    <preference name="EnableViewportScale" value="false" />
-    <preference name="SplashScreen" value="none" />
-    <preference name="AutoHideSplashScreen" value="true" />
-    <preference name="AndroidLaunchMode" value="singleTask" />
+    <preference name="Fullscreen" value="true" />
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="StatusBarStyle" value="default" />
+    <preference name="WKWebViewOnly" value="true" />
 </widget>

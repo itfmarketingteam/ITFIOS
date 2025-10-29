@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en_US</string>
 	<key>CFBundleDisplayName</key>
-	<string>HelloCordova</string>
+	<string>ITFLLC Payments</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -71,7 +71,7 @@
 		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>172.10.10.50</key>
+			<key>62.89.3.242</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
