@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ITF LLC</title>
+
+  </head>
+  <body>
+
+  <script src="cordova.js"></script>
+  <script>
+    function redirectToSite() {
+    if (cordova && cordova.plugins && cordova.plugins.webviewSettings) {
+      cordova.plugins.webviewSettings.set({
+        builtInZoomControls: false,
+        displayZoomControls: false,
+        supportZoom: false,
+      });
+    }  
+
+      const url = "http://62.89.3.242:9000";
+
+      try {
+        if (window.cordova) {
+          if (cordova.platformId === "browser") {
+            // Если просто браузер
+            window.location.href = url;
+          } else {
+            // Если мобильное устройство
+            if (cordova.InAppBrowser) {
+              cordova.InAppBrowser.open(url, "_self", "location=no,toolbar=no");
+            } else {
+              // fallback — если InAppBrowser отсутствует
+              window.location.replace(url);
+            }
+          }
+        } else {
+          // Если Cordova не загружен (например, просто HTML)
+          window.location.href = url;
+        }
+      } catch (e) {
+        console.error("Ошибка при редиректе:", e);
+        window.location.href = url;
+      }
+    }
+
+    // 🔹 Выполнить сразу при загрузке страницы
+    redirectToSite();
+
+    // 🔹 И ещё раз, когда Cordova полностью готов (на всякий случай)
+    document.addEventListener("deviceready", redirectToSite, false);
+
+
+    
+  </script>
+
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="am.tfllc.payments" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="CDVWebViewEngine">
+        <param name="ios-package" value="CDVWebViewEngine" />
+    </feature>
+    <feature name="LaunchScreen">
+        <param name="ios-package" value="CDVLaunchScreen" />
+    </feature>
+    <feature name="LocalStorage">
+        <param name="ios-package" value="CDVLocalStorage" />
+    </feature>
+    <feature name="Console">
+        <param name="ios-package" value="CDVLogger" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="HandleOpenUrl">
+        <param name="ios-package" value="CDVHandleOpenURL" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="IntentAndNavigationFilter">
+        <param name="ios-package" value="CDVIntentAndNavigationFilter" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="GestureHandler">
+        <param name="ios-package" value="CDVGestureHandler" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="ios-package" value="CDVWKInAppBrowser" />
+        <param name="onload" value="true" />
+    </feature>
+    <allow-navigation href="ionic://*" />
+    <feature name="IonicWebView">
+        <param name="ios-package" value="CDVWKWebViewEngine" />
+    </feature>
+    <name>ITF LLC</name>
+    <description>Приложение для оплаты коммунальных услуг в Армении</description>
+    <author email="hello@itfllc.am" href="http://62.89.3.242:9000">TFLLC LLC</author>
+    <content src="index.html" />
+    <allow-navigation href="http://62.89.3.242:9000/*" />
+    <allow-navigation href="https://62.89.3.242:9000/*" />
+    <allow-navigation href="*" />
+    <access origin="*" />
+    <allow-intent href="*" />
+    <icon src="resources/icon.png" />
+    <Splash density="port-xxxhdpi" src="resources/splash.png" />
+    <edit-config file="*-Info.plist" mode="merge" target="NSAppTransportSecurity">
+        <dict>
+            <key>NSAllowsArbitraryLoads</key>
+            <true />
+        </dict>
+    </edit-config>
+    <preference name="AllowInlineMediaPlayback" value="true" />
+    <preference name="MediaTypesRequiringUserActionForPlayback" value="none" />
+    <preference name="SuppressesIncrementalRendering" value="false" />
+    <preference name="SuppressesLongPressGesture" value="false" />
+    <preference name="Suppresses3DTouchGesture" value="false" />
+    <preference name="deployment-target" value="11.0" />
+    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+    <preference name="Fullscreen" value="true" />
+    <preference name="DisallowOverscroll" value="false" />
+    <preference name="ScrollEnabled" value="true" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="ShowSplashScreen" value="false" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="FadeSplashScreen" value="false" />
+    <preference name="SplashScreen" value="none" />
+    <preference name="SplashScreenDelay" value="0" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="EnableViewportScale" value="false" />
+    <preference name="ZoomControlsEnabled" value="false" />
+    <preference name="ShowZoomControls" value="false" />
+    <preference name="UserAgent" value="default" />
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/icon.png" />
+    <preference name="AndroidWindowSplashScreenBackground" value="#FFFFFF" />
+    <preference name="WKWebViewOnly" value="true" />
+</widget>
